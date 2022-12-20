@@ -15,12 +15,12 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
-app.use("/posts", postRoutes)
-app.use("/user", userRoutes)
-
 app.get("/", (req,res) => {
     res.send("APP IS RUNNING")
 })
+app.use("/posts", postRoutes)
+app.use("/user", userRoutes)
+
 
 const PORT = process.env.PORT
 
